@@ -1,4 +1,4 @@
-# Hardware
+# 2. Hardware
 
 The PDP-11 on which UNIX is implemented is a 16-bit 12K computer,
 and UNIX occupies 8K words. More than half of this space,

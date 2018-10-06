@@ -1,4 +1,4 @@
-# Introduction 
+# 1. Introduction 
 
 UNIX is a general-purpose, multi-user time sharing system implemented
 on several Digital Equipment Corporation PDP series machines.

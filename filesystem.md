@@ -1,10 +1,10 @@
-# The File System
+# 3. The File System
 
 The most important role of UNIX is to provide a file system. From
 the point of view of the user, there are three kinds of files:
 ordinary disk files, directories, and special files.
 
-## Ordinary Files
+## 3.1 Ordinary Files
 
 A file contains whatever information the user places there, for
 example symbolic or binary (object) programs. No particular
@@ -18,7 +18,7 @@ debugger expects, a name list file in a particular format;
 however, the structure of files is controlled solely by the
 programs which use them, not by the system.
 
-## Directories
+## 3.2 Directories
 
 Directories (sometimes, "catalogs"), provide the mapping between
 the names of files and the files themselves, and thus induce a
@@ -89,7 +89,7 @@ hierarchy. If arbitrary links to directories were permitted, it
 would be quite difficult to detect when the last connection from
 the root to a directory was severed.
 
-## Special Files
+## 3.3 Special Files
 
 Special files constitute the most unusual feature of the UNIX
 file system. Each I/O device supported by UNIX is associated with
@@ -101,7 +101,7 @@ by the appropriate name.
 
 The special files are discussed further in section 6 below.
 
-## Protection
+## 3.4 Protection
 
 The protection scheme in UNIX is quite simple. Each user of the
 system is assigned a unique user number. When a file-is created,
@@ -118,7 +118,7 @@ users. If the set-user-identification bit is on for a program,
 the accounting file may be accessed during the program’s execution
 but not otherwise.
 
-## System I/O Calls
+## 3.5 System I/O Calls
 
 The system calls to do I/O are designed to eliminate the differences
 between the various devices and styles of access. There
@@ -137,7 +137,7 @@ described in Appendix 1 in their actual form.) Each call to the
 system may potentially result in an error return, which for simplicity
 is not represented in the calling sequence.
 
-### Open
+### 3.5.1 Open
 
 To read or write a file assumed to exist already, it must be
 Opened by the following call:
@@ -161,7 +161,7 @@ on the number of users who may have a file open for reading
 or writing. Although one may imagine situations in which this
 fact is unfortunate, in practice difficulties are quite rare.
 
-### Create
+### 3.5.2 Create
 
 To create a new file, the following call is used.
 
@@ -176,7 +176,7 @@ which are to be placed on the file by the protection
 mechanism. To create a file, the user must have write permission
 in the directory in which the file is being created.
 
-### Write
+### 3.5.3 Write
 
 Except as indicated below, reading and writing are sequential.
 This means that if a particular byte in the file was the last
@@ -204,7 +204,7 @@ open, not create) the bytes written affect only those implied by
 the position of the write pointer and the number of bytes
 written; no other part of the file is changed.
 
-### Read
+### 3.5.4 Read
 
 To read, the call is
 
@@ -235,7 +235,7 @@ pointer becomes equal to the current size of the file. It is possible
 to generate an end-of-file from a typewriter by use of an
 escape sequence which depends on the device used.
 
-### Seek
+### 3.5.5 Seek
 
 To do "random", that is, direct access I/O it is only necessary
 to move the read or write pointer to the appropriate location in
@@ -253,7 +253,7 @@ negative to move the pointer backwards. For some devices (e.g.
 paper tape and typewriters) seek calls are meaningless and are
 ignored.
 
-### Tell
+### 3.5.6 Tell
 
 The current position of the pointer may be discovered as follows:
 
@@ -267,7 +267,7 @@ the beginning of the file, from the current position of the pointer,
 or from the end. In the second case, of course, the result
 is always zero.
 
-# Implementation of the File System
+# 4. Implementation of the File System
 
 As mentioned in section 3.2 above, a directory entry contains
 only a name for the associated file and a pointer to the file

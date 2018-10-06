@@ -1,6 +1,6 @@
-# The Shell
+# 5. The Shell
 
-## General
+## 5.1 General
 
 Communication with UNIX is carried on with the aid of a program
 called the Shell. The Shell is a command line interpreter: it
@@ -26,7 +26,7 @@ If file command cannot be found, the Shell prefixes the string
 "/bin/" to command and attempts again to find the file. Directory
 "/bin" contains all the commands provided by the system itself.
 
-## Standard I/O
+## 5.2 Standard I/O
 
 The discussion of I/O given above seems to imply that every file
 used by a program must be opened or created by the program in
