@@ -39,3 +39,5 @@ sections:
 6. Census of Special Files
 7. Traps
 8. Some Commands
+9. Appendix 1: System Calls
+10. Appendix 2: as, db, ed, tap
