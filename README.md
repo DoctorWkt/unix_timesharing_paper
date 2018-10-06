@@ -41,3 +41,8 @@ sections:
 8. Some Commands
 9. Appendix 1: System Calls
 10. Appendix 2: as, db, ed, tap
+
+## The 1973 SOSP Presentation
+
+Unfortunately, all we have left of the presentation at the Fourth ACM
+Symposium on Operating System Principles is the abstract of the paper.
