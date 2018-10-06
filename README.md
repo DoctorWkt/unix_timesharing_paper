@@ -21,3 +21,21 @@ There are five known versions of this paper:
 
 There may also be a version of the paper from around 1972 which is still
 in the Nokia Bell Labs archives. This has yet to be confirmed.
+
+I have separated each of the sections of the paper into several Markdown
+files; this makes it easier for the changes in each version to be
+compared.
+
+## The Mid-1971 Draft of the Paper
+
+The draft of the paper, written by Dennis Ritchie in mid-1971, has these
+sections:
+
+1. Introduction
+2. Hardware
+3. The File System
+4. Implementation of the File System
+5. The Shell
+6. Census of Special Files
+7. Traps
+8. Some Commands
